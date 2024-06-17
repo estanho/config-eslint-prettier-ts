@@ -16,6 +16,10 @@ npm install typescript @types/node
 npx tsc --init
 ```
 
+```shell
+npm install -D tsx
+```
+
 - Instalar as dependências necessárias:
 
 ```shell
@@ -43,6 +47,8 @@ export default [
   eslintPluginPrettierRecommended
 ]
 ```
+
+- Copie as configurações do arquivo [tsconfig.json](https://github.com/estanho/config-eslint-prettier-ts/blob/main/tsconfig.json)
 
 ---
 

@@ -9,7 +9,7 @@ npm init -y
 ```
 
 ```shell
-npm install typescript 
+npm install typescript @types/node
 ```
 
 ```shell

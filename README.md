@@ -55,6 +55,13 @@ export default [
 
 - Para funcionar o autocomplete das variáveis de ambiente é necessário criar o arquivo chamado [environment.d.ts](https://github.com/estanho/config-eslint-prettier-ts/blob/main/environment.d.ts) e difinir as variáveis.
 
+package.json:
+```json
+"scripts": {
+  "dev": "tsx watch --env-file=.env server.ts"
+},
+```
+
 ---
 
 ### Bibliotecas interessantes:

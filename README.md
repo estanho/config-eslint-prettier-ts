@@ -5,11 +5,11 @@ Repositório para salvar configurações do **Eslint** + **Prettier** com *TypeS
 - Iniciar o projeto com:
 
 ```shell
-npm init -y
+pnpm init
 ```
 
 ```shell
-npm install typescript @types/node
+pnpm install typescript @types/node -D
 ```
 
 ```shell
@@ -17,22 +17,22 @@ npx tsc --init
 ```
 
 ```shell
-npm install -D tsx
+pnpm install tsx -D
 ```
 
 - Instalar as dependências necessárias:
 
 ```shell
-npm install --save-dev eslint-plugin-prettier eslint-config-prettier
+pnpm install eslint eslint-config-prettier eslint-plugin-prettier eslint-plugin-simple-import-sort @eslint/js typescript-eslint -D
 ```
 
 ```shell
-npm install --save-dev --save-exact prettier
+pnpm install prettier -D
 ```
 
 ---
 
-- Após instalar as dependências é necessário instalar e configurar o Eslint.
+- Após instalar as dependências é necessário configurar o Eslint.
 
 ```shell
 npm init @eslint/config@latest
@@ -40,18 +40,37 @@ npm init @eslint/config@latest
 
 - Cole esse código no arquivo `eslint.config.mjs`:
 ```js
+...
 import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended';
 
 export default [
   // any other config imports go at the top
-  eslintPluginPrettierRecommended
-]
+  eslintPluginPrettierRecommended,
+];
 ```
 
 - Copie as configurações do arquivo [tsconfig.json](https://github.com/estanho/config-eslint-prettier-ts/blob/main/tsconfig.json)
 
 ---
 
+- Para funcionar o autocomplete das variáveis de ambiente é necessário criar o arquivo chamado [environment.d.ts](https://github.com/estanho/config-eslint-prettier-ts/blob/main/environment.d.ts) e difinir as variáveis.
+
+---
+
 ### Bibliotecas interessantes:
 
-- eslint-plugin-simple-import-sort
+- **tsup**: converte os arquivos `TS` em `JS` criando o *.dist/*.
+  - Instalar: `pnpm install tsup -D`
+  <br>
+
+- **prisma-dbml-generator**: gera um arquivo que possibilita visualizar o banco de dados em um diagrama.
+  - Instalar: `pnpm install prisma-dbml-generator -D`
+  <br>
+
+- **prisma**: um bom ORM :D
+  - Instalar: `pnpm install prisma -D`
+  <br>
+
+  **pino-pretty**: deixa o logger *pino* mais bonito visualmente e fácil de entender (*pino é usado no fastify*).
+    - Instalar: `pnpm install pino-pretty -D`
+    <br>

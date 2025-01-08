@@ -23,7 +23,7 @@ pnpm install tsx -D
 - Instalar as dependências necessárias:
 
 ```shell
-pnpm install eslint eslint-config-prettier eslint-plugin-prettier eslint-plugin-simple-import-sort @eslint/js typescript-eslint -D
+pnpm install eslint eslint-config-prettier eslint-plugin-prettier @ianvs/prettier-plugin-sort-imports @eslint/js typescript-eslint -D
 ```
 
 ```shell

@@ -5,29 +5,29 @@ Repositório para salvar configurações do **Eslint** + **Prettier** com *TypeS
 - Iniciar o projeto com:
 
 ```shell
-pnpm init
+npm init
 ```
 
 ```shell
-pnpm install typescript @types/node -D
+npm install typescript @types/node -D
 ```
 
 ```shell
-npx tsc --init
+npx tsc --init 
 ```
 
 ```shell
-pnpm install tsx -D
+npm install tsx -D # Node 22 roda com o Typescript
 ```
 
 - Instalar as dependências necessárias:
 
 ```shell
-pnpm install eslint eslint-config-prettier eslint-plugin-prettier @ianvs/prettier-plugin-sort-imports @eslint/js typescript-eslint -D
+npm install eslint eslint-config-prettier eslint-plugin-prettier @ianvs/prettier-plugin-sort-imports @eslint/js typescript-eslint -D
 ```
 
 ```shell
-pnpm install prettier -D
+npm install prettier -D
 ```
 
 ---
@@ -44,7 +44,7 @@ npm init @eslint/config@latest
 import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended';
 
 export default [
-  // any other config imports go at the top
+  // Verificar se não existe outras configurações conflitando
   eslintPluginPrettierRecommended,
 ];
 ```
@@ -66,18 +66,26 @@ package.json:
 
 ### Bibliotecas interessantes:
 
+- **cross-env**: para definir variáveis de ambiente sem erros em diferentes ambientes.
+  - Instalar: `npm install cross-env -D`
+  <br>
+
+- **npm-run-all**: executar vários scripts em uma única linha.
+  - Instalar: `npm install npm-run-all -D`
+  <br>
+
 - **tsup**: converte os arquivos `TS` em `JS` criando o *.dist/*.
-  - Instalar: `pnpm install tsup -D`
+  - Instalar: `npm install tsup -D`
   <br>
 
 - **prisma-dbml-generator**: gera um arquivo que possibilita visualizar o banco de dados em um diagrama.
-  - Instalar: `pnpm install prisma-dbml-generator -D`
+  - Instalar: `npm install prisma-dbml-generator -D`
   <br>
 
 - **prisma**: um bom ORM :D
-  - Instalar: `pnpm install prisma -D`
+  - Instalar: `npm install prisma -D`
   <br>
 
   **pino-pretty**: deixa o logger *pino* mais bonito visualmente e fácil de entender (*pino é usado no fastify*).
-    - Instalar: `pnpm install pino-pretty -D`
+    - Instalar: `npm install pino-pretty -D`
     <br>

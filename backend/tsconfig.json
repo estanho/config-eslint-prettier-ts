@@ -29,6 +29,6 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true
   },
-  "include": ["src/**/*","environment.d.ts"],
+  "include": ["src/**/*","backend/environment.d.ts"],
   "exclude": ["node_modules", "build",".env"]
 }

@@ -16,10 +16,6 @@ npm install typescript @types/node -D
 npx tsc --init 
 ```
 
-```shell
-npm install tsx -D # Node 22 roda com o Typescript
-```
-
 - Instalar as dependências necessárias:
 
 ```shell
@@ -58,7 +54,7 @@ export default [
 package.json:
 ```json
 "scripts": {
-  "dev": "tsx watch --env-file=.env server.ts"
+  "dev": "node --watch --env-file=.env server.ts"
 },
 ```
 
